@@ -39,33 +39,45 @@
       
 
 
-print('\n####### EJERCICIO 4 ########\n')
+# print('\n####### EJERCICIO 4 ########\n')
 
-diasSemana = {1:'lunes', 2:'martes', 3:'miercoles', 4:'jueves', 5:'viernes', 6:'sabado', 7:'domingo'}
-dia = int(input('escriba un numero \n'))
+# diasSemana = {1:'lunes', 2:'martes', 3:'miercoles', 4:'jueves', 5:'viernes', 6:'sabado', 7:'domingo'}
+# dia = int(input('escriba un numero \n'))
 
-if dia ==1:
-   print(f"El dia de la semana es lunes")
-elif dia ==2:
-   print(f"El dia de la semana es martes")
-elif dia ==3:
-   print(f"El dia de la semana es miercoles")
-elif dia ==4:
-   print(f"El dia de la semana es jueves")
-elif dia ==5:
-   print(f"El dia de la semana es viernes")
+# if dia ==1:
+#    print(f"El dia de la semana es lunes")
+# elif dia ==2:
+#    print(f"El dia de la semana es martes")
+# elif dia ==3:
+#    print(f"El dia de la semana es miercoles")
+# elif dia ==4:
+#    print(f"El dia de la semana es jueves")
+# elif dia ==5:
+#    print(f"El dia de la semana es viernes")
+# else:
+#    print(f"Es fin de semana")
+
+
+
+# print('\n####### EJERCICIO 5 ########\n')
+
+# diasSemana = {1:'lunes', 2:'martes', 3:'miercoles', 4:'jueves', 5:'viernes', 6:'sabado', 7:'domingo'}
+# number = int(input('escriba un numero \n'))
+
+# for key, value in diasSemana.items():
+#     if number == key:
+#         print(f"El dia de la semana es {value}")
+
+
+
+print('\n####### EJERCICIO 6 ########\n')
+
+pais = input('Escriba un pais: \n').lower()
+
+if not (pais == 'colombia' or pais == 'mexico' or pais == 'venezuela'):
+   print(f"El pais {pais.capitalize()} No es de habla hispana")
 else:
-   print(f"Es fin de semana")
-
-
-
-print('\n####### EJERCICIO 5 ########\n')
-
-diasSemana = {1:'lunes', 2:'martes', 3:'miercoles', 4:'jueves', 5:'viernes', 6:'sabado', 7:'domingo'}
-number = int(input('escriba un numero \n'))
-
-for key, value in diasSemana.items():
-    if number == key:
-        print(f"El dia de la semana es {value}")
+   print(f"El pais {pais.capitalize()} es de habla hispana")
+  
 
 
