@@ -31,3 +31,18 @@ for x in fruits:
 
 
 # bucle while
+
+contador = 1
+while contador <= 6:
+  print(f'\n estoy en el numero {contador}')
+  contador += 1
+  
+  
+num_user = int(input('cual es la tabla que quiere observar?: '))
+contador1 = 1
+while contador1 <= 10:
+      print(f' {num_user} X {contador1} = {num_user * contador1}')
+      contador1 += 1
+      
+else:
+    print('tabla terminada')
