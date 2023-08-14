@@ -33,40 +33,41 @@
 print("\n·······Ejercicio 3··········")
 
 
-def operacionesMatematicas(operador, numA, numB):
+def operacionesMatematicas(numA, numB, operador):
     operadores = ["suma", "resta", "multiplica", "divide"]
 
-    if operador in operadores:
-        if numA != 0 and numB != 0:
-            return {
-                "suma": print(f"la suma entre {numA} y {numB} es: {numA+numB}"),
-                "resta": print(f"la resta entre {numA} y {numB} es: {numA-numB}"),
-                "multiplica": (
-                    f"la multiplicacion entre {numA} y {numB} es: {numA*numB}"
-                ),
-                "divide": (f"la division entre {numA} y {numB} es: {numA/numB}"),
-            }.get(operador, None)
-
-        else:
+    if numA != 0 and numB != 0:
+        return {
+            "suma": print(f"\nla suma entre {numA} y {numB} es: {numA+numB}"),
+            "resta": print(f"\nla resta entre {numA} y {numB} es: {numA-numB}"),
+            "multiplica": print(
+                f"la multiplicacion entre {numA} y {numB} es: {numA*numB}"
+            ),
+            "divide": print(f"la division entre {numA} y {numB} es: {numA/numB}"),
+        }.get(
+            operador,
             print(
-                f"El usuario no ha ingresado los numeros para realizar los calculos basicos."
-            )
+                f"El operador {operador} no esta en el siguiente listado: {operadores}."
+            ),
+        )
 
     else:
-        print(f"El operador {operador} no esta en el siguiente listado: {operadores}.")
+        print(
+            f"El usuario no ha ingresado los numeros para realizar los calculos basicos."
+        )
 
 
 num = input("\ningrese el primer numero: ")
 num1 = input("ingrese el segundo numero: ")
-operador = input(
-    "ingrese la operacion que desea realizar: (suma, resta , multiplica, divide) "
-)
+operador = input("por favor escriba: suma, resta , multiplica, ó divide ")
 
 if num != "":
     numA = int(num)
-elif num1 != "":
+if num1 != "":
     numB = int(num1)
 else:
     numA = 0
     numB = 0
-operacionesMatematicas(operador, numA, numB)
+
+
+operacionesMatematicas(numA, numB, operador)
