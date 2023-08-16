@@ -34,6 +34,15 @@ lista4 = ["hola", 1, 2, False, True]
 
 print("\n######## Listas multidimensionales ###########")
 
-lista4 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+lista4 = [[1, 2, [3, 4, 5], 3], [4, 5, 6], [7, 8, 9]]
 
-print(lista4[1])
+print(lista4)
+
+for item in lista4:
+    for value1 in item:
+        print("primera dimension-> ", value1)
+        if isinstance(value1, list):
+            print("---")
+            for value2 in value1:
+                print("segunda dimension-> ", value2)
+            print("---")
